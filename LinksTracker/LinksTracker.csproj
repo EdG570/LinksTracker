@@ -201,33 +201,25 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201903021316319_InitialMigration.cs" />
-    <Compile Include="Migrations\201903021316319_InitialMigration.Designer.cs">
-      <DependentUpon>201903021316319_InitialMigration.cs</DependentUpon>
+    <Compile Include="Migrations\201903021425510_InitialMigration.cs" />
+    <Compile Include="Migrations\201903021425510_InitialMigration.Designer.cs">
+      <DependentUpon>201903021425510_InitialMigration.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201903021319195_AddCourseModel.cs" />
-    <Compile Include="Migrations\201903021319195_AddCourseModel.Designer.cs">
-      <DependentUpon>201903021319195_AddCourseModel.cs</DependentUpon>
+    <Compile Include="Migrations\201903021429090_InitialMigration2.cs" />
+    <Compile Include="Migrations\201903021429090_InitialMigration2.Designer.cs">
+      <DependentUpon>201903021429090_InitialMigration2.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201903021324035_AddedSeedsForUsersAndCourses.cs" />
-    <Compile Include="Migrations\201903021324035_AddedSeedsForUsersAndCourses.Designer.cs">
-      <DependentUpon>201903021324035_AddedSeedsForUsersAndCourses.cs</DependentUpon>
+    <Compile Include="Migrations\201903021432460_InitialMigration3.cs" />
+    <Compile Include="Migrations\201903021432460_InitialMigration3.Designer.cs">
+      <DependentUpon>201903021432460_InitialMigration3.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201903021331507_AlterCoursePropUpdatedAtToNullable.cs" />
-    <Compile Include="Migrations\201903021331507_AlterCoursePropUpdatedAtToNullable.Designer.cs">
-      <DependentUpon>201903021331507_AlterCoursePropUpdatedAtToNullable.cs</DependentUpon>
+    <Compile Include="Migrations\201903021434484_InitialMigration4.cs" />
+    <Compile Include="Migrations\201903021434484_InitialMigration4.Designer.cs">
+      <DependentUpon>201903021434484_InitialMigration4.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201903021338179_FixingUserSeedTest.cs" />
-    <Compile Include="Migrations\201903021338179_FixingUserSeedTest.Designer.cs">
-      <DependentUpon>201903021338179_FixingUserSeedTest.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201903021348189_AddHoleModelAndPopulateSeeds.cs" />
-    <Compile Include="Migrations\201903021348189_AddHoleModelAndPopulateSeeds.Designer.cs">
-      <DependentUpon>201903021348189_AddHoleModelAndPopulateSeeds.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201903021354486_AddStatsModelAndPopulateStatsSeeds.cs" />
-    <Compile Include="Migrations\201903021354486_AddStatsModelAndPopulateStatsSeeds.Designer.cs">
-      <DependentUpon>201903021354486_AddStatsModelAndPopulateStatsSeeds.cs</DependentUpon>
+    <Compile Include="Migrations\201903021441137_FixSeedUserIdFK.cs" />
+    <Compile Include="Migrations\201903021441137_FixSeedUserIdFK.Designer.cs">
+      <DependentUpon>201903021441137_FixSeedUserIdFK.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -310,26 +302,20 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201903021316319_InitialMigration.resx">
-      <DependentUpon>201903021316319_InitialMigration.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201903021425510_InitialMigration.resx">
+      <DependentUpon>201903021425510_InitialMigration.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201903021319195_AddCourseModel.resx">
-      <DependentUpon>201903021319195_AddCourseModel.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201903021429090_InitialMigration2.resx">
+      <DependentUpon>201903021429090_InitialMigration2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201903021324035_AddedSeedsForUsersAndCourses.resx">
-      <DependentUpon>201903021324035_AddedSeedsForUsersAndCourses.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201903021432460_InitialMigration3.resx">
+      <DependentUpon>201903021432460_InitialMigration3.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201903021331507_AlterCoursePropUpdatedAtToNullable.resx">
-      <DependentUpon>201903021331507_AlterCoursePropUpdatedAtToNullable.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201903021434484_InitialMigration4.resx">
+      <DependentUpon>201903021434484_InitialMigration4.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201903021338179_FixingUserSeedTest.resx">
-      <DependentUpon>201903021338179_FixingUserSeedTest.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201903021348189_AddHoleModelAndPopulateSeeds.resx">
-      <DependentUpon>201903021348189_AddHoleModelAndPopulateSeeds.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201903021354486_AddStatsModelAndPopulateStatsSeeds.resx">
-      <DependentUpon>201903021354486_AddStatsModelAndPopulateStatsSeeds.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201903021441137_FixSeedUserIdFK.resx">
+      <DependentUpon>201903021441137_FixSeedUserIdFK.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

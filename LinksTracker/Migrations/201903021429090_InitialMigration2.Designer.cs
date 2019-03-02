@@ -7,13 +7,13 @@ namespace LinksTracker.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class AddedSeedsForUsersAndCourses : IMigrationMetadata
+    public sealed partial class InitialMigration2 : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(AddedSeedsForUsersAndCourses));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(InitialMigration2));
         
         string IMigrationMetadata.Id
         {
-            get { return "201903021324035_AddedSeedsForUsersAndCourses"; }
+            get { return "201903021429090_InitialMigration2"; }
         }
         
         string IMigrationMetadata.Source

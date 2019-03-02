@@ -8,6 +8,42 @@ namespace LinksTracker.Migrations
         public override void Up()
         {
             CreateTable(
+                "dbo.Courses",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        Name = c.String(),
+                        Par = c.Int(nullable: false),
+                        Address = c.String(),
+                        City = c.String(),
+                        State = c.String(),
+                        Rating = c.Double(nullable: false),
+                        Slope = c.Double(nullable: false),
+                        TotalHoles = c.Int(nullable: false),
+                        CreatedAt = c.DateTime(nullable: false),
+                        UpdatedAt = c.DateTime(),
+                        CreatedBy = c.String(),
+                        UpdatedBy = c.String(),
+                    })
+                .PrimaryKey(t => t.Id);
+            
+            CreateTable(
+                "dbo.Holes",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        Number = c.Int(nullable: false),
+                        CourseId = c.Int(nullable: false),
+                        Yardage = c.Int(nullable: false),
+                        Par = c.Int(nullable: false),
+                        CreatedAt = c.DateTime(nullable: false),
+                        UpdatedAt = c.DateTime(),
+                    })
+                .PrimaryKey(t => t.Id)
+                .ForeignKey("dbo.Courses", t => t.CourseId, cascadeDelete: true)
+                .Index(t => t.CourseId);
+            
+            CreateTable(
                 "dbo.AspNetRoles",
                 c => new
                     {
@@ -29,6 +65,28 @@ namespace LinksTracker.Migrations
                 .ForeignKey("dbo.AspNetUsers", t => t.UserId, cascadeDelete: true)
                 .Index(t => t.UserId)
                 .Index(t => t.RoleId);
+            
+            CreateTable(
+                "dbo.Stats",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        FIR = c.Boolean(nullable: false),
+                        GIR = c.Boolean(nullable: false),
+                        UpAndDown = c.Boolean(nullable: false),
+                        Putts = c.Int(nullable: false),
+                        Penalties = c.Int(nullable: false),
+                        Score = c.Int(nullable: false),
+                        CreatedAt = c.DateTime(nullable: false),
+                        UpdatedAt = c.DateTime(),
+                        HoleId = c.Int(nullable: false),
+                        UserId = c.String(maxLength: 128),
+                    })
+                .PrimaryKey(t => t.Id)
+                .ForeignKey("dbo.Holes", t => t.HoleId, cascadeDelete: true)
+                .ForeignKey("dbo.AspNetUsers", t => t.UserId)
+                .Index(t => t.HoleId)
+                .Index(t => t.UserId);
             
             CreateTable(
                 "dbo.AspNetUsers",
@@ -79,21 +137,30 @@ namespace LinksTracker.Migrations
         
         public override void Down()
         {
+            DropForeignKey("dbo.Stats", "UserId", "dbo.AspNetUsers");
             DropForeignKey("dbo.AspNetUserRoles", "UserId", "dbo.AspNetUsers");
             DropForeignKey("dbo.AspNetUserLogins", "UserId", "dbo.AspNetUsers");
             DropForeignKey("dbo.AspNetUserClaims", "UserId", "dbo.AspNetUsers");
+            DropForeignKey("dbo.Stats", "HoleId", "dbo.Holes");
             DropForeignKey("dbo.AspNetUserRoles", "RoleId", "dbo.AspNetRoles");
+            DropForeignKey("dbo.Holes", "CourseId", "dbo.Courses");
             DropIndex("dbo.AspNetUserLogins", new[] { "UserId" });
             DropIndex("dbo.AspNetUserClaims", new[] { "UserId" });
             DropIndex("dbo.AspNetUsers", "UserNameIndex");
+            DropIndex("dbo.Stats", new[] { "UserId" });
+            DropIndex("dbo.Stats", new[] { "HoleId" });
             DropIndex("dbo.AspNetUserRoles", new[] { "RoleId" });
             DropIndex("dbo.AspNetUserRoles", new[] { "UserId" });
             DropIndex("dbo.AspNetRoles", "RoleNameIndex");
+            DropIndex("dbo.Holes", new[] { "CourseId" });
             DropTable("dbo.AspNetUserLogins");
             DropTable("dbo.AspNetUserClaims");
             DropTable("dbo.AspNetUsers");
+            DropTable("dbo.Stats");
             DropTable("dbo.AspNetUserRoles");
             DropTable("dbo.AspNetRoles");
+            DropTable("dbo.Holes");
+            DropTable("dbo.Courses");
         }
     }
 }

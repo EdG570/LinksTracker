@@ -1,9 +1,12 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace LinksTracker.Models
 {
     public class Stats
     {
+        [Key]
         public int Id { get; set; }
         public bool FIR { get; set; }
         public bool GIR { get; set; }
@@ -14,9 +17,12 @@ namespace LinksTracker.Models
         public DateTime CreatedAt { get; set; }
         public DateTime? UpdatedAt { get; set; }
         public int HoleId { get; set; }
-        public int UserId { get; set; }
+        public string UserId { get; set; }
 
+        [ForeignKey("HoleId")]
         public virtual Hole Hole { get; set; }
+
+        [ForeignKey("UserId")]
         public virtual ApplicationUser User { get; set; }
     }
 }

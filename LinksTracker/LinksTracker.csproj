@@ -217,9 +217,18 @@
     <Compile Include="Migrations\201903021331507_AlterCoursePropUpdatedAtToNullable.Designer.cs">
       <DependentUpon>201903021331507_AlterCoursePropUpdatedAtToNullable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201903021338179_FixingUserSeedTest.cs" />
+    <Compile Include="Migrations\201903021338179_FixingUserSeedTest.Designer.cs">
+      <DependentUpon>201903021338179_FixingUserSeedTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201903021348189_AddHoleModelAndPopulateSeeds.cs" />
+    <Compile Include="Migrations\201903021348189_AddHoleModelAndPopulateSeeds.Designer.cs">
+      <DependentUpon>201903021348189_AddHoleModelAndPopulateSeeds.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Course.cs" />
+    <Compile Include="Models\Hole.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -307,6 +316,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201903021331507_AlterCoursePropUpdatedAtToNullable.resx">
       <DependentUpon>201903021331507_AlterCoursePropUpdatedAtToNullable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903021338179_FixingUserSeedTest.resx">
+      <DependentUpon>201903021338179_FixingUserSeedTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903021348189_AddHoleModelAndPopulateSeeds.resx">
+      <DependentUpon>201903021348189_AddHoleModelAndPopulateSeeds.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -21,6 +21,7 @@ namespace LinksTracker.Models
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public DbSet<Course> Courses { get; set; }
+        public DbSet<Hole> Holes { get; set; }
 
 
         public ApplicationDbContext()

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace LinksTracker.Models
@@ -20,6 +21,6 @@ namespace LinksTracker.Models
         public string CreatedBy { get; set; }
         public string UpdatedBy { get; set; }
 
-        // public virtual ICollection<Hole> Holes { get; set; }
+        public virtual ICollection<Hole> Holes { get; set; }
     }
 }

@@ -16,10 +16,11 @@ namespace LinksTracker.Migrations
         {
             var users = new List<ApplicationUser>
             {
-                new ApplicationUser { Id = "1", UserName = "cole570", PasswordHash = "Pass123" }
+                new ApplicationUser { Id = "1", UserName = "cole570", PasswordHash = "Pass123", Email = "cole570@hotmail.com" }
             };
 
             users.ForEach(u => context.Users.AddOrUpdate(u));
+            context.SaveChanges();
 
             var courses = new List<Course>
             {
@@ -40,7 +41,22 @@ namespace LinksTracker.Migrations
             };
 
             courses.ForEach(c => context.Courses.AddOrUpdate(c));
+            context.SaveChanges();
 
+            var holes = new List<Hole>
+            {
+                new Hole { Id = 1, CourseId = 3, Number = 1, Par = 3, Yardage = 217, CreatedAt = DateTime.Now },
+                new Hole { Id = 2, CourseId = 3, Number = 2, Par = 4, Yardage = 253, CreatedAt = DateTime.Now },
+                new Hole { Id = 3, CourseId = 3, Number = 3, Par = 4, Yardage = 275, CreatedAt = DateTime.Now },
+                new Hole { Id = 4, CourseId = 3, Number = 4, Par = 3, Yardage = 187, CreatedAt = DateTime.Now },
+                new Hole { Id = 5, CourseId = 3, Number = 5, Par = 5, Yardage = 347, CreatedAt = DateTime.Now },
+                new Hole { Id = 6, CourseId = 3, Number = 6, Par = 4, Yardage = 266, CreatedAt = DateTime.Now },
+                new Hole { Id = 7, CourseId = 3, Number = 7, Par = 3, Yardage = 154, CreatedAt = DateTime.Now },
+                new Hole { Id = 8, CourseId = 3, Number = 8, Par = 4, Yardage = 314, CreatedAt = DateTime.Now },
+                new Hole { Id = 9, CourseId = 3, Number = 9, Par = 5, Yardage = 443, CreatedAt = DateTime.Now },
+            };
+
+            holes.ForEach(h => context.Holes.AddOrUpdate(h));
             context.SaveChanges();
 
             //  This method will be called after migrating to the latest version.

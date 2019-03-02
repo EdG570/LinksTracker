@@ -22,6 +22,7 @@ namespace LinksTracker.Models
     {
         public DbSet<Course> Courses { get; set; }
         public DbSet<Hole> Holes { get; set; }
+        public DbSet<Stats> Stats { get; set; }
 
 
         public ApplicationDbContext()

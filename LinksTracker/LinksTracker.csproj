@@ -225,12 +225,17 @@
     <Compile Include="Migrations\201903021348189_AddHoleModelAndPopulateSeeds.Designer.cs">
       <DependentUpon>201903021348189_AddHoleModelAndPopulateSeeds.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201903021354486_AddStatsModelAndPopulateStatsSeeds.cs" />
+    <Compile Include="Migrations\201903021354486_AddStatsModelAndPopulateStatsSeeds.Designer.cs">
+      <DependentUpon>201903021354486_AddStatsModelAndPopulateStatsSeeds.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Course.cs" />
     <Compile Include="Models\Hole.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Stats.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -322,6 +327,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201903021348189_AddHoleModelAndPopulateSeeds.resx">
       <DependentUpon>201903021348189_AddHoleModelAndPopulateSeeds.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903021354486_AddStatsModelAndPopulateStatsSeeds.resx">
+      <DependentUpon>201903021354486_AddStatsModelAndPopulateStatsSeeds.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
